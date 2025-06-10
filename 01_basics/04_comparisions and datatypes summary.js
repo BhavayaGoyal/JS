@@ -34,3 +34,30 @@ const myFunction = function(){
 // myFunction() calling function with the help of a constant
 
 console.log(typeof bigno)
+
+
+
+
+//******************************************************************
+
+//  Stack (Primitive)
+
+let myName = "bhavaya"
+let anotherName = myName
+anotherName="goyal"
+console.log(anotherName)
+console.log(myName)
+
+//  Heap(Refernce)
+
+let user1={
+    email:"abc@gmail.com",
+    upi:"abc123",
+}
+
+let user2 = user1
+
+user2.email="bhavaya@google.com"
+
+console.log(user1.email)
+console.log(user2.email)
