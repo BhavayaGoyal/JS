@@ -45,8 +45,8 @@ console.log(typeof bigno)
 let myName = "bhavaya"
 let anotherName = myName
 anotherName="goyal"
-console.log(anotherName)
-console.log(myName)
+// console.log(anotherName)
+// console.log(myName)
 
 //  Heap(Refernce)
 
