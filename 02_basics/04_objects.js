@@ -17,7 +17,7 @@ const regularUser = {
         }
     }
 }
-console.log(regularUser.fullname.username.firstname);
+//console.log(regularUser.fullname.username.firstname);
 
 const obj1 = {1: "a", 2:"b"}
 const obj2 = {3:"c", 4:"d"}
@@ -43,10 +43,28 @@ const users = [
     },
 ]
 users[1].email
-console.log(instaUser);
+// console.log(instaUser);
 
-console.log(Object.keys(instaUser));
-console.log(Object.values(instaUser));
-console.log(Object.entries(instaUser));
+// console.log(Object.keys(instaUser));
+// console.log(Object.values(instaUser));
+// console.log(Object.entries(instaUser));
 
-console.log(instaUser.hasOwnProperty('isLoggedIn'));
+// console.log(instaUser.hasOwnProperty('isLoggedIn'));
+
+const course = {
+    name: "Javascript",
+    price: "999",
+    courseInstructor: "hitesh"
+}
+
+const {courseInstructor} = course
+console.log(courseInstructor)
+
+const {courseInstructor: instructor} = course //destructuring
+console.log(instructor) 
+
+// {
+//     "name": "bhavaya",
+//     "coursename" : "Javascript",
+//     "price": "free"
+// }
