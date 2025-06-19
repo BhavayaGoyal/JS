@@ -39,7 +39,7 @@ if (true) {
 //console.log(username);
 
 
-//+++++++++++++++++++++++++++++++ interesting ++++++++++++++++++++++++++++
+//+++++++++++++++++++++++++++++++ interesting hoisting ++++++++++++++++++++++++++++
 console.log(addone(5))
 
 function  addone(value){
