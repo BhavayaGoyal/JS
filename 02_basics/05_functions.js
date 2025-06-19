@@ -49,5 +49,5 @@ const mynewArray = [200,400,600,1000]
 function return2ndValue(getArray){
     return getArray[2]
 }
-return2ndValue(mynewArray)
-return2ndValue([700,800,600])
+console.log(return2ndValue(mynewArray))
+console.log(return2ndValue([700,1000,1600]))
