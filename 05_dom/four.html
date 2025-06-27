@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <ul class = "language"> 
+           <li> JS </li>
+    </ul>
+</body>
+<script>
+    function addLanguage (name){
+        const li = document.createElement('li');
+        li.innerHTML = `${name}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+     addLanguage("Typescript")
+
+     function optiLanguage (langname){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+     }
+     optiLanguage('java') //we need not to use innerHTML bcoz it traverse the whole tree every time a new element is to added 
+     
+     //edit
+
+     const secondlang = document.querySelector("li:nth-child(2)")
+     //secondlang.innerHTML = "Mojo"
+     const newli = document.createElement('li')
+      newli.textContent = "Mojo"
+      secondlang.replaceWith(newli);
+
+      //edit
+
+      const secondlang1 = document.querySelector("li:first-child")
+       secondlang1.outerHTML = '<li> CSS </li>'
+
+       //remove 
+
+       const lastLang = document.querySelector('li: last-child')
+       lastLang.remove()
+    </script>
+</html>
