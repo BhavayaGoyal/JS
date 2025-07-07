@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <p> UNSENT
+The XMLHttpRequest client has been created, but the open() method hasn't been called yet.
+
+OPENED
+open() method has been invoked. During this state, the request headers can be set using the setRequestHeader() method and the send() method can be called which will initiate the fetch.
+
+HEADERS_RECEIVED
+send() has been called, all redirects (if any) have been followed and the response headers have been received.
+
+LOADING
+Response's body is being received. If responseType is "text" or empty string, responseText will have the partial text response as it loads.
+
+DONE
+The fetch operation is complete. This could mean that either the data transfer has been completed successfully or failed.</p>
+</body>
+<script>
+    const requestUrl = 'https://api.sampleapis.com/coffee/hot'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function() {
+    console.log(xhr.readyState)
+    if (xhr.readyState === 4) {
+         //console.log(this.responseText);
+        const data = JSON.parse(this.responseText)
+        console.log(typeof data)
+        console.log(data[0].title)
+    }
+    }
+
+    xhr.send()
+    </script>
+</html>
