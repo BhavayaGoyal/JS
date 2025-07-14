@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clousers</title>
+    <h1> Hello</h1>
+</head>
+<body style = "background-color: #212121; color: azure">
+    <button id="orange"> ORANGE </button>
+    <button id="green">GREEN</button>
+
+    <script>
+//       function init() {
+//          let name = "Mozilla"; 
+//            function displayName() {
+//               console.log(name); 
+//         }
+//         displayName();
+//    }
+//      init();
+
+    // function outer() {
+    //     let username = "bhavaya" 
+    //     console.log(secret) 
+    //     function inner(){
+    //         let secret="my123"
+    //     console.log("Inner: ",username)
+    //     } 
+    //     function inner2(){
+    //       console.log("Inner2: ",username)
+    //       console.log(secret)  
+    //     }
+    //     inner() 
+    //     inner2()
+    // }
+    // outer()
+    // console.log("Outer: ",username)
+
+    // function makeFunc() {
+    //    const name = "Mozilla";
+    //    function displayName() {
+    //        console.log(name);
+    //     }
+    //    return displayName;
+    // } 
+
+    // const myFunc = makeFunc();
+    // myFunc();
+    </script>
+    <script>
+        function clickHandler(color){
+        //    document.body.style.backgroundColor = '${color}'
+
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+        }
+            }
+        
+        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('green').onclick = clickHandler("green")
+
+    </script>
+</body>
+</html>
